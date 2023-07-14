@@ -1,24 +1,29 @@
-import { AppBar, Box, Button, Divider, Toolbar, Typography } from "@mui/material";
+import { AppBar, Button, Divider, Stack, Toolbar, Typography } from "@mui/material";
+import { NavLink } from "react-router-dom";
 
 const navItems = ['Home', 'About', 'Projects'];
 
 function TopBar() {
     return (
-        <AppBar position="static">
-            <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    IO Jack
-                </Typography>
-                <Divider />
-                <Box sx={{ display: 'block' }}>
-                    {navItems.map((item) => (
-                        <Button key={item} sx={{ color: '#fff' }}>
-                            {item}
+            <AppBar position="static" sx={{ borderRadius: 2, mt: 2 }}>
+                <Toolbar>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        IO Jack
+                    </Typography>
+                    <Divider />
+                    <Stack direction="row" spacing={2}>
+                        <Button component={NavLink} to={"/"} sx={{ color: '#fff' }}>
+                            Home
                         </Button>
-                    ))}
-                </Box>
-            </Toolbar>
-        </AppBar>
+                        <Button component={NavLink} to={"/About"} sx={{ color: '#fff' }}>
+                            About
+                        </Button>
+                        <Button component={NavLink} to={"/Projects"} sx={{ color: '#fff' }}>
+                            Projects
+                        </Button>
+                    </Stack>
+                </Toolbar>
+            </AppBar>
     );
 }
 
