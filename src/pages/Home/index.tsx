@@ -1,27 +1,18 @@
-import { Box, Typography } from "@mui/material"
+import { Grid } from "@mui/material";
+import BannerCard from "../../components/BannerCard";
 
 
 function Home() {
     return (
-        <Box>
-            <Box sx={{ my: 4 }}>
-            <Typography variant="h4" component="h1" gutterBottom>
-                Material UI Vite.js example in Typescript
-            </Typography>
-            </Box>
-            <Box sx={{ my: 2 }}>
-            {[...new Array(12)]
-                .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                )
-                .join('\n')}
-            </Box>
-        </Box>
+        <Grid container mt={2}>
+            <Grid item xs={12}>
+                <BannerCard>
+                    Welcome to my personal portfolio webpage. Here you will find a variety of projects I have worked on that range from pure programming, to server setup and much more.
+                </BannerCard>
+            </Grid>
+        </Grid>
     );
-    
+
 }
 
 export default Home

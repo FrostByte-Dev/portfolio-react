@@ -1,24 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
+import BannerCard from "../../components/BannerCard";
 
 function About() {
     return (
-        <Box>
-            <Box sx={{ my: 4 }}>
-            <Typography variant="h4" component="h1" gutterBottom>
-                About Page
-            </Typography>
-            </Box>
-            <Box sx={{ my: 2 }}>
-            {[...new Array(12)]
-                .map(
-                () => `Cras mattis consectetur purus sit amet fermentum.
-                        Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                        Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-                )
-                .join('\n')}
-            </Box>
-        </Box>
+        <Grid container mt={2}>
+            <Grid item xs={12}>
+                <BannerCard>
+                    This is the About Page
+                </BannerCard>
+            </Grid>
+        </Grid>
     );
 }
 
