@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import TopBar from "./components/TopBar";
 import { Outlet } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import BannerCard from "./components/BannerCard";
 
 function App() {
@@ -11,14 +11,22 @@ function App() {
         <Grid item xs={12}>
           <TopBar />
         </Grid>
-        <Grid item lg={5}>
-          <BannerCard>
-            Welcome to my personal portfolio webpage. Here you will find a
-            variety of projects I have worked on that range from pure
-            programming, to server setup and much more.
-          </BannerCard>
+        <Grid item lg={5} md={12} sm={12} xs={12} >
+          <Box padding={2} border={2} borderRadius={2} borderColor={'primary.main'} bgcolor={'primary.main'} color={'#fff'}>
+            <Typography variant="h4" fontWeight={"bold"} gutterBottom>
+              Jacques Levasseur
+            </Typography>
+            <Typography variant="h6" fontWeight={"bold"} gutterBottom>
+              Senior Full Stack Developer
+            </Typography>
+            <Typography variant="body1" maxWidth={'25rem'}>
+              Passionate about delivering innovative products, I excel in
+              problem-solving and collaboration to enhance user experiences and
+              drive business growth.
+            </Typography>
+          </Box>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item lg={7}>
           <Outlet />
         </Grid>
       </Grid>

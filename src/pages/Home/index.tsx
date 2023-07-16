@@ -3,7 +3,7 @@ import BannerCard from "../../components/BannerCard";
 
 function Home() {
   return (
-    <Grid container mt={2}>
+    <Grid container>
       <Grid item xs={12}>
         <BannerCard>
           Welcome to my personal portfolio webpage. Here you will find a variety
