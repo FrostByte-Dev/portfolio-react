@@ -10,7 +10,7 @@ import { NavLink } from "react-router-dom";
 
 function TopBar() {
   return (
-    <AppBar position="static" elevation={0} sx={{ borderRadius: 2, mt: 2 }}>
+    <AppBar position="static" elevation={0} sx={{ borderRadius: 2 }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           IO Jack

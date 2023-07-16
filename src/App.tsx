@@ -7,16 +7,18 @@ import BannerCard from "./components/BannerCard";
 function App() {
   return (
     <Box m={2}>
-      <TopBar />
-      <Grid container mt={2}>
-        <Grid item xs={4}>
+      <Grid container spacing={2}>
+        <Grid item xs={12}>
+          <TopBar />
+        </Grid>
+        <Grid item lg={5}>
           <BannerCard>
             Welcome to my personal portfolio webpage. Here you will find a
             variety of projects I have worked on that range from pure
             programming, to server setup and much more.
           </BannerCard>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={7}>
           <Outlet />
         </Grid>
       </Grid>
