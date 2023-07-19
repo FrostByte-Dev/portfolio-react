@@ -7,7 +7,7 @@ import ProfileCard from "./components/ProfileCard";
 function App() {
   return (
     <Box m={2}>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} alignItems={"stretch"}>
         <Grid item xs={12}>
           <TopBar />
         </Grid>
