@@ -1,5 +1,27 @@
 import { Box, Grid } from "@mui/material";
 import ProfileCard from "../../components/ProfileCard";
+import ProjectCard from "../../components/ProjectCard";
+
+const projects = [
+  {
+    title: 'Title 1',
+    desc: 'This is a random description.',
+    url: '',
+    createdDate: new Date(),
+  },
+  {
+    title: 'Title 2',
+    desc: 'This is a random description.',
+    url: '',
+    createdDate: new Date(),
+  },
+  {
+    title: 'Title 3',
+    desc: 'This is a random description.',
+    url: '',
+    createdDate: new Date(),
+  }
+]
 
 const Home = () => (
   <Grid container mt={0} spacing={2} alignItems={"stretch"}>
@@ -21,6 +43,13 @@ const Home = () => (
         setup and much more.
       </Box>
     </Grid>
+    {
+      projects.map(project => (
+        <Grid item lg={4} md={12} sm={12} xs={12} >
+          <ProjectCard {...project} />
+        </Grid>
+      ))
+    }
   </Grid>
 );
 
