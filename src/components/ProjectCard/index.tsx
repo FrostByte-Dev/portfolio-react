@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 interface Project {
   title: string;
@@ -16,8 +16,11 @@ const ProjectCard = (props: Project) => (
     borderColor={"primary.main"}
     bgcolor={"primary.main"}
     color={"#fff"}
-    height={"100%"}
+    height={"300px"}
   >
+    <Typography variant="h4" fontWeight={"bold"} gutterBottom>
+      {props.title}
+    </Typography>
     {props.desc}
   </Box>
 );

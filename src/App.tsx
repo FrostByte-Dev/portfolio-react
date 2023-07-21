@@ -1,18 +1,17 @@
-import Box from "@mui/material/Box";
 import TopBar from "./components/TopBar";
 import { Outlet } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 
 const App = () => (
-  <Box m={2}>
-    <Grid container>
+  <Container maxWidth="xl">
+    <Grid container mt={2}>
       <Grid item xs={12}>
         <TopBar />
       </Grid>
     </Grid>
 
     <Outlet />
-  </Box>
+  </Container>
 );
 
 export default App;

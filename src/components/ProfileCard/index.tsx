@@ -6,10 +6,10 @@ const ProfileCard = () => (
   <Box
     padding={2}
     border={2}
+    borderTop={40}
     borderRadius={2}
     borderColor={"primary.main"}
-    bgcolor={"primary.main"}
-    color={"#fff"}
+    color={"primary.main"}
   >
     <Typography variant="h4" fontWeight={"bold"} gutterBottom>
       Jacques Levasseur
@@ -29,14 +29,14 @@ const ProfileCard = () => (
       <Link
         href="https://github.com/FrostByte-Dev"
         target="_blank"
-        color={"#fff"}
+        color={"primary.main"}
       >
         <GitHubIcon />
       </Link>
       <Link
         href="https://www.linkedin.com/in/jacqueslevasseur/"
         target="_blank"
-        color={"#fff"}
+        color={"primary.main"}
       >
         <LinkedInIcon />
       </Link>
