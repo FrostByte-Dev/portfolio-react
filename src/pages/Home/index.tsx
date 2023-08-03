@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import ProfileCard from "../../components/ProfileCard";
 import ProjectCard from "../../components/ProjectCard";
 
@@ -24,30 +24,58 @@ const projects = [
 ];
 
 const Home = () => (
-  <Grid container mt={0} spacing={2} alignItems={"stretch"}>
+  <Grid container spacing={2} sx={{ mt: 5 }}>
     <Grid item lg={5} md={12} sm={12} xs={12}>
       <ProfileCard />
     </Grid>
     <Grid item lg={7}>
       <Box
-        padding={2}
-        border={2}
-        borderRadius={2}
-        borderColor={"primary.main"}
-        bgcolor={"primary.main"}
-        color={"#fff"}
-        height={"100%"}
+        sx={{
+          padding: 2,
+          border: 2,
+          borderRadius: 2,
+          borderColor: "primary.main",
+          bgcolor: "primary.main",
+          color: "#fff",
+          height: "100%",
+        }}
       >
-        Welcome to my personal portfolio webpage. Here you will find a variety
-        of projects I have worked on that range from pure programming, to server
-        setup and much more.
+        <Typography variant="h3" gutterBottom>
+          Welcome
+        </Typography>
+        <Typography variant="h5" gutterBottom>
+          Welcome to my personal portfolio webpage. Here you will find a variety
+          of projects I have worked on that range from pure programming, to
+          server setup and much more.
+        </Typography>
       </Box>
     </Grid>
-      {projects.map((project) => (
-        <Grid item lg={4} md={12} sm={12} xs={12}>
-          <ProjectCard {...project} />
-        </Grid>
-      ))}
+    <Grid item container xs={12} sx={{ mt: 5, mb: 2 }}>
+      <Grid item xs></Grid>
+      <Grid item xs={6}>
+        {/* <Divider sx={{ borderColor: "primary.main" }} /> */}
+        <Box
+          sx={{
+            border: 2,
+            borderRadius: 4,
+            borderColor: "primary.main",
+            bgcolor: "primary.main",
+            height: "15px",
+          }}
+        ></Box>
+      </Grid>
+      <Grid item xs></Grid>
+    </Grid>
+    <Grid item xs={12}>
+      <Typography variant="h4" sx={{ color: "primary.main" }} gutterBottom>
+        Projects
+      </Typography>
+    </Grid>
+    {projects.map((project) => (
+      <Grid item lg={4} md={12} sm={12} xs={12}>
+        <ProjectCard {...project} />
+      </Grid>
+    ))}
   </Grid>
 );
 
